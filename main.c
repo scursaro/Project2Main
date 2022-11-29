@@ -47,6 +47,17 @@ int main()
     double taxiSpent;
     double spentMealTotal;
 
+    printf("Emplyee Expense Report\n");
+    printf("_______________________\n");
+
+    printf("Employee Name: ");
+    scanf("%s", employeename);
+    printf("\n" ,employeename);
+
+    //days = getDays(days); //this will call the function to get the days
+
+
+
     //functoin calls to the unfinished functions
 
     //a lot of printing the expenses and whatnot 
