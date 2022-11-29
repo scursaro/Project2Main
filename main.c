@@ -75,6 +75,12 @@ int main()
     printf("-----");
     allowedBreaksfastFee = 9.00 * days;
     allowedLunchFee = 12.00*days;
+    allowedDinnerFee = 16.00 * days;
+    allowedMealTotal = allowedBreaksfastFee + allowedLunchFee + allowedDinnerFee;
+    mealTotal = breaksfastFee + lunchFee + dinnerFee;
+    getMealAmount(allowedMealTotal, spentMealTotal);
+    printf("\n");
+
 
 
     //functoin calls to the unfinished functions
