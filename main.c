@@ -15,6 +15,7 @@ int main()
 
     int days;
     double arrivalTime;
+    double departureTime;
     double airfareFee;
     double carRentalFee;
     double privateCarFee;
@@ -56,6 +57,16 @@ int main()
 
     //days = getDays(days); //this will call the function to get the days
 
+    //getTime(departureTime, arrivalTime);
+
+    printf("Travel  \n");
+    printf("---------");
+    //airfareFee = getAirfareAmount(airfareFee); calls the function
+    //carRentalFee = getCarRentalAmount(carRentalFee); function call
+    //getPrivateVehicleExpense(privateCarFee);
+
+    allowedParking = 6 * days;
+    //getParkingAmount(parkingSpent, allowedParking);
 
 
     //functoin calls to the unfinished functions
