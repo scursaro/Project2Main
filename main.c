@@ -82,6 +82,12 @@ int main()
     printf("\n");
 
 
+    //calulations for total
+    spentTotal = airfareFee + carRentalFee + vechileExpense + parkingFee +taxiFee + registrationFee+hotelFee+privateCarMilage+mealTotal;
+    allowedTotal= airfareFee+privateCarMilage+carRentalFee+allowedParking+allowedTaxiFee+allowedMealTotal+allowedHotelFee;
+    
+
+
 
     //functoin calls to the unfinished functions
 
