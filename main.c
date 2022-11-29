@@ -67,6 +67,14 @@ int main()
 
     allowedParking = 6 * days;
     //getParkingAmount(parkingSpent, allowedParking);
+    allowedTaxiFee = 10 * days;
+    //getTaxiAmount(parkingSpent, allowedTaxiFee);
+    printf("\n");
+
+    printf("MEAL\n");
+    printf("-----");
+    allowedBreaksfastFee = 9.00 * days;
+    allowedLunchFee = 12.00*days;
 
 
     //functoin calls to the unfinished functions
