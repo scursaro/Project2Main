@@ -78,20 +78,25 @@ int main()
     allowedDinnerFee = 16.00 * days;
     allowedMealTotal = allowedBreaksfastFee + allowedLunchFee + allowedDinnerFee;
     mealTotal = breaksfastFee + lunchFee + dinnerFee;
-    getMealAmount(allowedMealTotal, spentMealTotal);
+    //getMealAmount(allowedMealTotal, spentMealTotal);
     printf("\n");
 
 
     //calulations for total
     spentTotal = airfareFee + carRentalFee + vechileExpense + parkingFee +taxiFee + registrationFee+hotelFee+privateCarMilage+mealTotal;
     allowedTotal= airfareFee+privateCarMilage+carRentalFee+allowedParking+allowedTaxiFee+allowedMealTotal+allowedHotelFee;
+
+    //a lot of printing the expenses and whatnot 
+    //displaying all of the totals
+
+    printf("Employee Expense Report for: %s", employeename);
+    printf("\n");
+    printf("Total days of trip: %d\n", days);
+    printf("Deparure time: %f  Arrival time: %f\n",departureTime,arrivalTime);
     
 
 
 
-    //functoin calls to the unfinished functions
-
-    //a lot of printing the expenses and whatnot 
 
 
 
