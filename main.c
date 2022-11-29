@@ -93,7 +93,22 @@ int main()
     printf("\n");
     printf("Total days of trip: %d\n", days);
     printf("Deparure time: %f  Arrival time: %f\n",departureTime,arrivalTime);
-    
+
+    printf("           Spent     Allowed\n");
+    printf("--------------------\n");
+    printf("Airfare:   %f      %f\n", airfareFee, airfareFee);
+    printf("Car Rental: %f        %f\n", carRentalFee, carRentalFee);
+    printf("Milage:    %f        %f\n", privateCarMilage, privateCarMilage);
+    printf("Parking:   %f      %f\n",parkingFee, allowedParking);
+    printf("Taxi:     %f         %f\n",taxiFee, allowedTaxiFee);
+    printf("Registration: %f         %f\n",registrationFee, registrationFee);
+    printf("Hotel:   %f     %f\n",hotelFee, allowedHotelFee);
+    printf("Meal:   %f     %f\n",spentMealTotal,allowedMealTotal);
+    printf("--------------------\n");
+    printf("TOTALS:   %f      %f\n", spentTotal, allowedTotal);
+
+
+
 
 
 
