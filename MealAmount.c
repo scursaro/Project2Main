@@ -1,10 +1,12 @@
 //this is the funcion that will obtain the amount for each meal
 
-//funcion will need to obtain user input for the price of specifc meals such as breakfast, lunch, and dinner
+void getMealAmount()
+{
+    //create local variables to store the user input
 
-//function also needs local vairables to store the user input
+    //ask the user for the price of each meal based on the amount of days spent and the time of departure
 
-//prices of meals will be asked based on the number of days spent on the trip and the time of departure
+    //store the input and calculate the total amount spent for each meal
 
-//after obtaining user input for meal prices, calculate the meal total
+}
 
