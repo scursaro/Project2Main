@@ -17,4 +17,16 @@ public double getDeparture(){
 
 public void getArrival(){
 
+    double arrival;
+
+    printf("At what time did you arrive? (In military time)\n");
+    scanf("%lf", &arrival);
+
+    while(arrival < 0 || arrival >23.59){
+        printf("Please Enter a Valid Time for arrival (In military time):\n");
+        scanf("%lf", &arrival);
+    }
+
+    return arrival;
+
 }
