@@ -2,7 +2,7 @@ include <stdio.h>
 
 double parkingAmount(int days){
     
-    //create variable
+    //create variable to return.
     double parkingCharge;
 
     //ask the user for the amount of money spent on parking per day.
