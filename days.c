@@ -6,13 +6,13 @@ int numberOfDays(){
     int days;
 
     //ask the user for the amount of days.
-    printf("How many days did the trip last?");
+    printf("How many days did the trip last?\n");
     //get the input for the user.
     scanf("%lf", &days);
 
     //loop that ensures the user has a vaid input for days.
     while(days < 1){
-        printf("How many days did the trip last?");
+        printf("How many days did the trip last?\n");
         scanf("%lf", &days);
     }
 
