@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 int numberOfDays(){
     
@@ -8,12 +8,12 @@ int numberOfDays(){
     //ask the user for the amount of days.
     printf("How many days did the trip last?\n");
     //get the input for the user.
-    scanf("%lf", &days);
+    scanf("%d", &days);
 
     //loop that ensures the user has a vaid input for days.
     while(days < 1){
         printf("How many days did the trip last?\n");
-        scanf("%lf", &days);
+        scanf("%d", &days);
     }
 
     return days;
