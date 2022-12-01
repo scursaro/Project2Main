@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 double parkingAmount(int days){
     
@@ -11,9 +11,9 @@ double parkingAmount(int days){
     scanf("%lf", &parkingCharge);
 
     //loop that ensures the user has a vaid input for days.
-    while (parkingFee < 0){
+    while (parkingCharge < 0){
         printf("Invalid Input. Enter a non-negative amount:\n");
-        scanf("%lf", &parkingFee);
+        scanf("%lf", &parkingCharge);
     }
 
     //return the amount of money spent per day times the amount of days spent.
