@@ -3,6 +3,7 @@
 //func for private vehicle expenses 
 double getPrivateVehicleExpense()
 {
+	double privateCarFee;
 	const double RATE = 0.38;
 	double miles;
 
