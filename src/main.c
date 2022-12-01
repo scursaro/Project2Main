@@ -59,7 +59,7 @@ int main()
 
     printf("Employee Name: ");
     scanf("%s", employeename);
-    printf("\n" ,employeename);
+    printf("\n%s, " ,employeename);
 
     days = numberOfDays(); //this will call the function to get the days
 
