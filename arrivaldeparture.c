@@ -1,6 +1,6 @@
 include <stdio.h>
 
-public double getDeparture(){
+double getDeparture(){
 
     //create variable to return.
     double departure;
@@ -18,7 +18,7 @@ public double getDeparture(){
     return departure;
 }
 
-public double getArrival(){
+double getArrival(){
 
     //create variable to return.
     double arrival;
