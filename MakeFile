@@ -1,0 +1,45 @@
+CC=gcc  
+
+all: $(OBJS)
+	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+
+main.o: main.c
+	$(CC) $(FLAGS) main.c
+
+arrivaldeparture.o: arrivaldeparture.c
+	$(CC) $(FLAGS) arrivaldeparture.c 
+
+days.o: days.c
+	$(CC) $(FLAGS) days.c 
+
+getAirfareAmount.o: getAirfareAmount.c
+	$(CC) $(FLAGS) getAirfareAmount.c 
+
+getCarRentalAmount.o: getCarRentalAmount.c
+	$(CC) $(FLAGS) getCarRentalAmount.c 
+
+getHotelAmount.o: getHotelAmount.c
+	$(CC) $(FLAGS) getHotelAmount.c 
+
+getPrivateVehicleExpense.o: getPrivateVehicleExpense.c
+	$(CC) $(FLAGS) getPrivateVehicleExpense.c 
+
+getRegistrationFee.o: getRegistrationFee.c
+	$(CC) $(FLAGS) getRegistrationFee.c 
+
+getTaxiAmount.o: getTaxiAmount.c
+	$(CC) $(FLAGS) getTaxiAmount.c 
+
+MealAmount.o: MealAmount.c
+	$(CC) $(FLAGS) MealAmount.c 
+
+parkingamount.o: parkingamount.c
+	$(CC) $(FLAGS) parkingamount.c 
+
+program: main.c arrivaldeparture.c days.c getAirfareAmount.c getCarRentalAmount.c getHotelAmount.c getPrivateVehicleExpense.c getRegistrationFee.c getTaxiAmount.c MealAmount.c parkingamount.c 
+
+ $(CC) -o program main.c arrivaldeparture.c days.c getAirfareAmount.c getCarRentalAmount.c getHotelAmount.c getPrivateVehicleExpense.c getRegistrationFee.c getTaxiAmount.c MealAmount.c parkingamount.c 
+
+clean:  
+
+ del program.exe rm -f $(OBJS) $(OUT)
