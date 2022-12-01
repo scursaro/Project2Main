@@ -3,6 +3,7 @@
 //func that is used for car rental expenses
 double getCarRentalAmount()
 {
+	double carRentalFee;
 	printf("What was the total cost of any car rentals?\n");
 	scanf("%lf", &carRentalFee);
 
