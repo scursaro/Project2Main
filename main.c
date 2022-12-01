@@ -8,6 +8,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "days.c"
+#include "MealAmount.c"
+#include "arrivaldeparture.c"
+#include "getAirfareAmount.c"
+#include "getCarRentalAmount.c"
+#include "getHotelAmount.c"
+#include "getPrivateVehicleExpense.c"
+#include "getRegistrationFee.c"
+#include "getTaxiAmount.c"
+#include "parkingamount.c"
+
 int main()
 {
     //we will need a lot of input from the user
@@ -19,7 +30,7 @@ int main()
     double airfareFee;
     double carRentalFee;
     double privateCarFee;
-    double vechileExpense;
+    double vehicleExpense;
     double privateCarMilage = .38;
     double parkingFee;
     double taxiFee;
@@ -55,21 +66,31 @@ int main()
     scanf("%s", employeename);
     printf("\n" ,employeename);
 
-    //days = getDays(days); //this will call the function to get the days
+    days = numberOfDays(); //this will call the function to get the days
 
-    //getTime(departureTime, arrivalTime);
+
+    departureTime = getDeparture();
+    arrivalTime = getArrival();
 
     printf("Travel  \n");
     printf("---------");
-    //airfareFee = getAirfareAmount(airfareFee); calls the function
-    //carRentalFee = getCarRentalAmount(carRentalFee); function call
-    //getPrivateVehicleExpense(privateCarFee);
+    airfareFee = getAirfareAmount(); //calls the function
+    carRentalFee = getCarRentalAmount(); //function call
+    vehicleExpense = getPrivateVehicleExpense();
 
     allowedParking = 6 * days;
-    //getParkingAmount(parkingSpent, allowedParking);
+    parkingFee = parkingAmount(days);
     allowedTaxiFee = 10 * days;
-    //getTaxiAmount(parkingSpent, allowedTaxiFee);
+    taxiFee = getTaxiAmount();
     printf("\n");
+
+    printf("FEE \n");
+    printf("------");
+    registrationFee = getRegistrationFee();
+    hotelFee = getHotelAmount(days);
+    allowedHotelFee = 90 * days;
+    printf("\n");
+
 
     printf("MEAL\n");
     printf("-----");
@@ -78,12 +99,12 @@ int main()
     allowedDinnerFee = 16.00 * days;
     allowedMealTotal = allowedBreaksfastFee + allowedLunchFee + allowedDinnerFee;
     mealTotal = breaksfastFee + lunchFee + dinnerFee;
-    //getMealAmount(allowedMealTotal, spentMealTotal);
+    getMealAmount(days);
     printf("\n");
 
 
     //calulations for total
-    spentTotal = airfareFee + carRentalFee + vechileExpense + parkingFee +taxiFee + registrationFee+hotelFee+privateCarMilage+mealTotal;
+    spentTotal = airfareFee + carRentalFee + vehicleExpense + parkingFee +taxiFee + registrationFee+hotelFee+privateCarMilage+mealTotal;
     allowedTotal= airfareFee+privateCarMilage+carRentalFee+allowedParking+allowedTaxiFee+allowedMealTotal+allowedHotelFee;
 
     //a lot of printing the expenses and whatnot 
@@ -98,7 +119,7 @@ int main()
     printf("--------------------\n");
     printf("Airfare:   %f      %f\n", airfareFee, airfareFee);
     printf("Car Rental: %f        %f\n", carRentalFee, carRentalFee);
-    printf("Milage:    %f        %f\n", privateCarMilage, privateCarMilage);
+    printf("Milage:    %f        %f\n", privateCarMilage, vehicleExpense);
     printf("Parking:   %f      %f\n",parkingFee, allowedParking);
     printf("Taxi:     %f         %f\n",taxiFee, allowedTaxiFee);
     printf("Registration: %f         %f\n",registrationFee, registrationFee);
